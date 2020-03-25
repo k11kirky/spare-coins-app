@@ -1,0 +1,10 @@
+{
+	"auth": {
+		"spacecoins8c745d43": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}

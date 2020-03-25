@@ -1,0 +1,20 @@
+{
+    "test": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-space-coins-test-194321-authRole",
+            "UnauthRoleArn": "arn:aws:iam::873393204172:role/amplify-space-coins-test-194321-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::873393204172:role/amplify-space-coins-test-194321-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "amplify-space-coins-test-194321-deployment",
+            "UnauthRoleName": "amplify-space-coins-test-194321-unauthRole",
+            "StackName": "amplify-space-coins-test-194321",
+            "StackId": "arn:aws:cloudformation:eu-west-1:873393204172:stack/amplify-space-coins-test-194321/681c8d60-6e42-11ea-9fd9-0655dfaca74c",
+            "AmplifyAppId": "d3pbg36fiqywaq"
+        },
+        "categories": {
+            "auth": {
+                "spacecoins8c745d43": {}
+            }
+        }
+    }
+}

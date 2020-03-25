@@ -1,19 +1,21 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import App from './src/App';
+import 'react-native-gesture-handler';
+// redux
+import { createStore, applyMiddleware } from 'redux'
+import { Provider } from 'react-redux'
+import rootReducer from './src/reducers'
+import thunk from 'redux-thunk'
+const store = createStore(rootReducer, applyMiddleware(thunk))
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Invest your spare coins in crypto!</Text>
-    </View>
-  );
-}
+// Amplify
+import config from './aws-exports' // this needs to be created or added by you, see README
+import Amplify from 'aws-amplify'
+Amplify.configure(config);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// App
+export default ReduxApp = () => (
+  <Provider store={store}>
+    <App />
+  </Provider>
+)
