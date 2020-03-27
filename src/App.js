@@ -4,6 +4,8 @@ import { StatusBar } from 'react-native'
 import { connect } from 'react-redux'
 import { Auth } from 'aws-amplify'
 
+import { logInSuccess } from "./actions";
+
 import Tabs from './auth/Tabs'
 import Nav from './nav/Nav'
 
@@ -18,6 +20,7 @@ class App extends React.Component {
       const user = await Auth.currentAuthenticatedUser()
       this.setState({ user, isLoading: false })
     } catch (err) {
+      console.log(err)
       this.setState({ isLoading: false })
     }
   }
@@ -26,6 +29,7 @@ class App extends React.Component {
       const user = await Auth.currentAuthenticatedUser()
       this.setState({ user })
     } catch (err) {
+      console.log(err)
       this.setState({ user: {} })
     }
   }
@@ -37,7 +41,7 @@ class App extends React.Component {
     }
     if (loggedIn) {
       return (
-        <Nav />
+        <Nav/>
       )
     }
     return (
@@ -50,4 +54,8 @@ const mapStateToProps = state => ({
   auth: state.auth
 })
 
-export default connect(mapStateToProps)(App)
+const mapDispatchToProps = {
+  dispatchLoggedInUser: user => logInSuccess(user)
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

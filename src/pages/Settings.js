@@ -22,6 +22,7 @@ class Settings extends React.Component {
       })
   }
   render() {
+    console.log("params", this.props.route.params)
     return (
       <View style={styles.container}>
         <View style={styles.homeContainer}>

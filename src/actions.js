@@ -73,7 +73,7 @@ export function logOut() {
   }
 }
 
-function logInSuccess(user) {
+export function logInSuccess(user) {
   return {
     type: LOG_IN_SUCCESS,
     user: user

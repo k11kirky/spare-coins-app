@@ -6,10 +6,10 @@ const colors = {
 }
 
 const fonts = {
-  hairline: '',
-  light: '',
-  base: '',
-  bold: ''
+  hairline: 'System',
+  light: 'System',
+  base: 'System',
+  bold: 'System'
 }
 
 export {
