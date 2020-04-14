@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 
-import { Ionicons } from '@expo/vector-icons';
+// import { Ionicons } from '@expo/vector-icons';
 import { colors } from "../theme";
 
 const Tab = createBottomTabNavigator();
@@ -23,9 +23,9 @@ export default function TabNavigator() {
             } else if (route.name === "SignUp") {
               iconName = "md-person-add";
             }
-
+            return;
             // You can return any component that you like here!
-            return <Ionicons name={iconName} size={size} color={color} />;
+            // return <Ionicons name={iconName} size={size} color={color} />;
           }
         })}
         tabBarOptions={{
